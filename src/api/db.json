@@ -1,14 +1,17 @@
 {
+  // Objeto principal contendo listas de usuários e empresas.
   "users": [
     {
-      "name": "Sobhan name",
-      "username": "Sobhan",
-      "email": "sobhan@yahoo.com",
-      "phone": "9893548125",
-      "companiesId": "1",
-      "id": 1
+      // Primeiro objeto de usuário.
+      "name": "Sobhan name",             // Nome completo do usuário.
+      "username": "Sobhan",              // Nome de usuário para login.
+      "email": "sobhan@yahoo.com",       // Endereço de e-mail do usuário.
+      "phone": "9893548125",             // Número de telefone do usuário.
+      "companiesId": "1",                // ID da empresa associada ao usuário.
+      "id": 1                            // ID único do usuário.
     },
     {
+      // Segundo objeto de usuário.
       "name": "Nastaran name",
       "username": "Nastaran",
       "email": "nasi@gmail.com",
@@ -17,7 +20,8 @@
       "id": 4
     },
     {
-      "id": 5,
+      // Terceiro objeto de usuário.
+      "id": 5,                           // ID único do usuário.
       "name": "Sobhan name",
       "username": "Sobhan",
       "email": "sobhan@yahoo.com",
@@ -25,8 +29,9 @@
       "companiesId": "3"
     },
     {
+      // Quarto objeto de usuário.
       "name": "Luis Javier Tovar",
-      "username": "",
+      "username": "",                    // Nome de usuário vazio.
       "email": "luisjavier_tovar@outlook.com",
       "phone": "1234567899",
       "companiesId": "1",
@@ -35,16 +40,19 @@
   ],
   "companies": [
     {
-      "id": 1,
-      "name": "Romaguera-Crona",
-      "catchPhrase": "Multi-layered client-server neural-net"
+      // Primeiro objeto de empresa.
+      "id": 1,                           // ID único da empresa.
+      "name": "Romaguera-Crona",         // Nome da empresa.
+      "catchPhrase": "Multi-layered client-server neural-net" // Slogan ou frase de efeito da empresa.
     },
     {
+      // Segundo objeto de empresa.
       "id": 2,
       "name": "Deckow-Crist",
       "catchPhrase": "Proactive didactic contingency"
     },
     {
+      // Terceiro objeto de empresa.
       "id": 3,
       "name": "Keebler LLC",
       "catchPhrase": "User-centric fault-tolerant solution"
