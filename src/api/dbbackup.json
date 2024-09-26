@@ -1,61 +1,70 @@
 {
-	"users": [
-		{
-			"id": 1,
-			"name": "Morad name",
-			"username": "Morad",
-			"email": "morad@april.biz",
-			"phone": "989143548471",
-			"companiesId": "1"
-		},
-		{
-			"id": 2,
-			"name": "Farshad name",
-			"username": "Farshad",
-			"email": "farshad@gmail.com",
-			"phone": "989332548474",
-			"companiesId": "2"
-		},
-		{
-			"id": 3,
-			"name": "Leila name",
-			"username": "Leila",
-			"email": "leila@april.biz",
-			"phone": "989215147848",
-			"companiesId": "2"
-		},
-		{
-			"id": 4,
-			"name": "Nastaran name",
-			"username": "Nastaran",
-			"email": "nasi@gmail.com",
-			"phone": "989387845214",
-			"companiesId": "3"
-		},
-		{
-			"id": 5,
-			"name": "Sobhan name",
-			"username": "Sobhan",
-			"email": "sobhan@yahoo.com",
-			"phone": "989354812514",
-			"companiesId": "3"
-		}
-	],
-	"companies": [
-		{
-			"id": 1,
-			"name": "Romaguera-Crona",
-			"catchPhrase": "Multi-layered client-server neural-net"
-		},
-		{
-			"id": 2,
-			"name": "Deckow-Crist",
-			"catchPhrase": "Proactive didactic contingency"
-		},
-		{
-			"id": 3,
-			"name": "Keebler LLC",
-			"catchPhrase": "User-centric fault-tolerant solution"
-		}
-	]
+  // Objeto principal contendo listas de usuários e empresas.
+  "users": [
+    {
+      // Primeiro usuário.
+      "id": 1,                             // ID único do usuário.
+      "name": "Morad name",                // Nome completo do usuário.
+      "username": "Morad",                 // Nome de usuário para login.
+      "email": "morad@april.biz",          // Endereço de e-mail do usuário.
+      "phone": "989143548471",             // Número de telefone do usuário.
+      "companiesId": "1"                   // ID da empresa associada ao usuário.
+    },
+    {
+      // Segundo usuário.
+      "id": 2,
+      "name": "Farshad name",
+      "username": "Farshad",
+      "email": "farshad@gmail.com",
+      "phone": "989332548474",
+      "companiesId": "2"
+    },
+    {
+      // Terceiro usuário.
+      "id": 3,
+      "name": "Leila name",
+      "username": "Leila",
+      "email": "leila@april.biz",
+      "phone": "989215147848",
+      "companiesId": "2"
+    },
+    {
+      // Quarto usuário.
+      "id": 4,
+      "name": "Nastaran name",
+      "username": "Nastaran",
+      "email": "nasi@gmail.com",
+      "phone": "989387845214",
+      "companiesId": "3"
+    },
+    {
+      // Quinto usuário.
+      "id": 5,
+      "name": "Sobhan name",
+      "username": "Sobhan",
+      "email": "sobhan@yahoo.com",
+      "phone": "989354812514",
+      "companiesId": "3"
+    }
+  ],
+  "companies": [
+    {
+      // Primeira empresa.
+      "id": 1,                           // ID único da empresa.
+      "name": "Romaguera-Crona",         // Nome da empresa.
+      "catchPhrase": "Multi-layered client-server neural-net" // Slogan ou frase de efeito da empresa.
+    },
+    {
+      // Segunda empresa.
+      "id": 2,
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency"
+    },
+    {
+      // Terceira empresa.
+      "id": 3,
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution"
+    }
+  ]
 }
