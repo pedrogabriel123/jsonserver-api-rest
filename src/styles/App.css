@@ -1,146 +1,168 @@
+/* Definição de variáveis de cores no seletor :root para uso global */
 :root {
-  --background-body: #E5E5E5;
-  --background-content: #1D1D1D;
-  --text-color: #292929;
-  --primary-color: #4DFF7C;
-  --second-color: #89DDFF;
+  --background-body: #E5E5E5;        /* Cor de fundo do corpo da página */
+  --background-content: #1D1D1D;     /* Cor de fundo para conteúdos específicos */
+  --text-color: #292929;             /* Cor principal do texto */
+  --primary-color: #4DFF7C;          /* Cor primária para elementos de destaque */
+  --second-color: #89DDFF;           /* Cor secundária para elementos adicionais */
 }
 
+/* Estilização geral do corpo da página */
 body {
-  margin: 0;
-  font-size: 1rem;
+  margin: 0;                         /* Remove as margens padrão */
+  font-size: 1rem;                   /* Define o tamanho da fonte padrão */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-body);
-  color: var(--text-color);
+    sans-serif;                      /* Define a família de fontes a ser usada */
+  -webkit-font-smoothing: antialiased; /* Suaviza as fontes em navegadores WebKit */
+  -moz-osx-font-smoothing: grayscale;  /* Suaviza as fontes no Firefox no macOS */
+  background-color: var(--background-body); /* Aplica a cor de fundo definida na variável */
+  color: var(--text-color);                 /* Aplica a cor do texto definida na variável */
 }
 
+/* Estilização do cabeçalho */
 header {
-  position: fixed;
-  width: 100%;
-  height: 3.5rem;
-  top: 0px;
-  left: 0px;
-  background-color: var(--background-content);
-  color: var(--background-body);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  position: fixed;                    /* Fixa o header no topo da página */
+  width: 100%;                        /* Ocupa toda a largura da janela */
+  height: 3.5rem;                     /* Define a altura do header */
+  top: 0px;                           /* Posiciona no topo */
+  left: 0px;                          /* Alinha à esquerda */
+  background-color: var(--background-content); /* Cor de fundo do header */
+  color: var(--background-body);               /* Cor do texto no header */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);    /* Adiciona uma sombra abaixo do header */
+  z-index: 10;                        /* Garante que o header fique acima de outros elementos */
 }
 
+/* Conteúdo interno do header */
 .header__content {
-  max-width: 1280px;
-  padding: 0 1rem;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  height: 3.5rem;
+  max-width: 1280px;                 /* Define a largura máxima do conteúdo */
+  padding: 0 1rem;                   /* Adiciona espaçamento interno nas laterais */
+  margin: auto;                      /* Centraliza horizontalmente */
+  display: flex;                     /* Utiliza flexbox para layout interno */
+  justify-content: space-between;    /* Espaça os itens igualmente ao longo do eixo principal */
+  align-items: center;               /* Alinha os itens ao centro verticalmente */
+  position: relative;                /* Define posição relativa para elementos posicionados internamente */
+  height: 3.5rem;                    /* Altura igual à do header */
 }
 
+/* Estilização do logo */
 .logo {
-  font-size: 20px;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  color: var(--background-body);
+  font-size: 20px;                   /* Tamanho da fonte do logo */
+  display: flex;                     /* Utiliza flexbox para itens internos */
+  gap: 0.5rem;                       /* Espaçamento entre os elementos internos */
+  align-items: center;               /* Alinha os itens ao centro verticalmente */
+  color: var(--background-body);     /* Cor do texto do logo */
 }
 
+/* Estilização do elemento principal */
 main {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 3rem;
-  margin-top: 4.5rem;
-  padding: 2rem;
-  /* background-color: var(--background-content); */
-  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
-  border-radius: 3px;
+  width: 80%;                        /* Largura de 80% do container pai */
+  margin: auto;                      /* Centraliza horizontalmente */
+  margin-bottom: 3rem;               /* Margem inferior de 3rem */
+  margin-top: 4.5rem;                /* Margem superior para evitar sobreposição com o header fixo */
+  padding: 2rem;                     /* Espaçamento interno de 2rem */
+  /* background-color: var(--background-content); */ /* Comentado: cor de fundo opcional */
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, 
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */ /* Comentado: sombra opcional */
+  border-radius: 3px;                /* Bordas levemente arredondadas */
 }
 
+/* Estilização do formulário */
 form {
-  width: fit-content;
-  margin: auto;
+  width: fit-content;                /* Largura ajustada ao conteúdo interno */
+  margin: auto;                      /* Centraliza horizontalmente */
 }
 
+/* Estilização dos inputs e selects */
 input, select {
-  border: none;
-  border-radius: 3px;
-  padding: 6px;
-  margin:  0 6px;
+  border: none;                      /* Remove bordas padrão */
+  border-radius: 3px;                /* Bordas levemente arredondadas */
+  padding: 6px;                      /* Espaçamento interno */
+  margin:  0 6px;                    /* Margem horizontal entre os elementos */
 }
 
+/* Estilização dos títulos h3 */
 h3 {
-  text-align: center;
-  margin-top: 0;
+  text-align: center;                /* Centraliza o texto */
+  margin-top: 0;                     /* Remove margem superior */
 }
 
+/* Estilização dos botões */
 button {
-  background-color: var(--second-color);
-  color: var(--text-color);
-  border: none;
-  cursor: pointer;
-  border-radius: 3px;
-  font-weight: bold;
+  background-color: var(--second-color); /* Cor de fundo do botão */
+  color: var(--text-color);              /* Cor do texto do botão */
+  border: none;                          /* Remove bordas padrão */
+  cursor: pointer;                       /* Cursor de ponteiro ao passar sobre o botão */
+  border-radius: 3px;                    /* Bordas levemente arredondadas */
+  font-weight: bold;                     /* Texto em negrito */
 }
 
+/* Estilização do container de botões */
 .buttons {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  gap: 0.5rem;
+  width: 100%;                       /* Ocupa toda a largura disponível */
+  display: flex;                     /* Utiliza flexbox para layout interno */
+  justify-content: space-around;     /* Distribui os botões com espaço ao redor */
+  gap: 0.5rem;                       /* Espaçamento entre os botões */
 }
 
+/* Estilização do botão de submissão */
 .btn-submit {
-  background-color: var(--primary-color);
-  padding: 6px 12px;
-  cursor: pointer;
-  font-weight: bolder;
+  background-color: var(--primary-color); /* Cor de fundo específica */
+  padding: 6px 12px;                      /* Espaçamento interno */
+  cursor: pointer;                        /* Cursor de ponteiro */
+  font-weight: bolder;                    /* Texto em negrito mais forte */
 }
 
+/* Efeito ao passar o mouse sobre os botões */
 button:hover,
 .btn-submit:hover {
-  opacity: 0.8;
+  opacity: 0.8;                           /* Reduz a opacidade para indicar interatividade */
 }
 
+/* Estilização do container de todos os usuários */
 .all-users {
-margin-top: 3rem;
+  margin-top: 3rem;                       /* Margem superior */
 }
 
+/* Estilização dos títulos e linhas da tabela */
 .titles,
 .row {
-  width: 100%;
-  display: flex;
-  text-align: center;
-}
-.titles{
-  font-weight: bold;
-  background-color: var(--text-color);
-  color: var(--background-body);
+  width: 100%;                            /* Ocupa toda a largura */
+  display: flex;                          /* Utiliza flexbox */
+  text-align: center;                     /* Centraliza o texto */
 }
 
+/* Estilização específica dos títulos */
+.titles {
+  font-weight: bold;                      /* Texto em negrito */
+  background-color: var(--text-color);    /* Cor de fundo dos títulos */
+  color: var(--background-body);          /* Cor do texto dos títulos */
+}
+
+/* Estilização das colunas */
 .titles div,
 .row input,
 .row select,
-  .row div{
-  width: 20%;
-  padding: 0.5rem;
+.row div {
+  width: 20%;                             /* Cada coluna ocupa 20% da largura */
+  padding: 0.5rem;                        /* Espaçamento interno */
 }
 
+/* Classe para ocultar formulários */
 .hide-form {
-  display: none;
+  display: none;                          /* Não exibe o elemento */
 }
 
+/* Media query para telas com largura máxima de 920px */
 @media screen and (max-width: 920px) {
   main {
-    width: 90%;
+    width: 90%;                           /* Ajusta a largura do main para 90% */
   }
 }
 
+/* Media query para telas com largura máxima de 520px */
 @media screen and (max-width: 520px) {
   main {
-    width: 100%;
+    width: 100%;                          /* Ajusta a largura do main para 100% */
   }
 }
