@@ -1,54 +1,73 @@
+// Exporta uma função chamada 'httpHelper'.
 export const httpHelper = () => {
-	const customFetch = async (url, options = {}) => {
-		const defaultMethod = "GET"
-		const defaultHeaders = {
-			"Content-Type": "application/json",
-			Accept: "application/json",
-		}
-		const controller = new AbortController()
-		options.signal = controller.signal
+  // Função assíncrona 'customFetch' para realizar requisições HTTP personalizadas.
+  const customFetch = async (url, options = {}) => {
+    // Define o método padrão como 'GET'.
+    const defaultMethod = "GET"
+    // Define os cabeçalhos padrão para as requisições.
+    const defaultHeaders = {
+      "Content-Type": "application/json", // Indica que o conteúdo é JSON.
+      Accept: "application/json",         // Espera receber JSON como resposta.
+    }
+    // Cria um controlador para permitir o cancelamento da requisição.
+    const controller = new AbortController()
+    // Adiciona o sinal do controlador às opções da requisição.
+    options.signal = controller.signal
 
-		options.method = options.method || defaultMethod
-		options.headers = options.headers
-			? { ...defaultHeaders, ...options.headers }
-			: defaultHeaders
+    // Define o método da requisição, usando o método fornecido ou o padrão.
+    options.method = options.method || defaultMethod
+    // Configura os cabeçalhos da requisição, combinando os padrão e os fornecidos.
+    options.headers = options.headers
+      ? { ...defaultHeaders, ...options.headers }
+      : defaultHeaders
 
-		options.body = JSON.stringify(options.body) || false
-		if (!options.body) delete options.body
+    // Converte o corpo da requisição em JSON, se existir.
+    options.body = JSON.stringify(options.body) || false
+    // Remove o corpo da requisição se não houver conteúdo.
+    if (!options.body) delete options.body
 
-		setTimeout(() => {
-			controller.abort()
-		}, 3000)
+    // Configura um temporizador para abortar a requisição após 3 segundos.
+    setTimeout(() => {
+      controller.abort()
+    }, 3000)
 
-		try {
-			const response = await fetch(url, options)
-			return await response.json()
-		} catch (err) {
-			return err
-		}
-	}
+    try {
+      // Realiza a requisição usando fetch com a URL e opções fornecidas.
+      const response = await fetch(url, options)
+      // Retorna a resposta convertida em JSON.
+      return await response.json()
+    } catch (err) {
+      // Retorna o erro caso a requisição falhe.
+      return err
+    }
+  }
 
-	const get = (url, options = {}) => customFetch(url, options)
+  // Função para realizar requisições GET.
+  const get = (url, options = {}) => customFetch(url, options)
 
-	const post = (url, options) => {
-		options.method = "POST"
-		return customFetch(url, options)
-	}
+  // Função para realizar requisições POST.
+  const post = (url, options) => {
+    options.method = "POST"         // Define o método como 'POST'.
+    return customFetch(url, options) // Chama 'customFetch' com as opções atualizadas.
+  }
 
-	const put = (url, options) => {
-		options.method = "PUT"
-		return customFetch(url, options)
-	}
+  // Função para realizar requisições PUT.
+  const put = (url, options) => {
+    options.method = "PUT"          // Define o método como 'PUT'.
+    return customFetch(url, options) // Chama 'customFetch' com as opções atualizadas.
+  }
 
-	const del = (url, options) => {
-		options.method = "DELETE"
-		return customFetch(url, options)
-	}
+  // Função para realizar requisições DELETE.
+  const del = (url, options) => {
+    options.method = "DELETE"       // Define o método como 'DELETE'.
+    return customFetch(url, options) // Chama 'customFetch' com as opções atualizadas.
+  }
 
-	return {
-		get,
-		post,
-		put,
-		del,
-	}
+  // Retorna um objeto com as funções de requisição HTTP.
+  return {
+    get,
+    post,
+    put,
+    del,
+  }
 }
